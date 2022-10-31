@@ -12,6 +12,7 @@ The original data are from [this repo](https://github.com/rguo12/network-deconfo
 
 Due to the size limit, we put 1) data simulation code 2) the original data and 3) the simulated data in [google drive](https://drive.google.com/drive/folders/1jHjebKNSu-Kdrr-HKj73hkdpMj-1DS7-?usp=sharing).
 
+We use `METIS` to partion a graph. If you'd like to apply it to your data, please refer to the [official package](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview). There is also a [python version](https://metis.readthedocs.io/en/latest/#installation).
 
 How to run?
 -----------------
