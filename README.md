@@ -22,5 +22,27 @@ How to run?
 
 * Step1 (run):
 	* `cd ./src`
-	* For Aminer dataset: `python main.py --dataset aminer --epochs 700 --batch_size 3000`
-	* For APS dataset: `python main.py --dataset aps --epochs 500 --batch_size 1200`
+	* For BC dataset: `python main.py --dataset BC`
+	* For Flickr dataset: `python main.py --dataset Flickr`
+	* See explanations for other arguements and parameters in `main.py`.
+
+The prediction, evluation results and embeddings are stored under the `result` folder.
+
+
+
+Contact
+----------------------
+Song Jiang <songjiang@cs.ucla.edu>
+
+
+Bibtex
+----------------------
+
+```bibtex
+@inproceedings{netest2022,
+  title={Estimating Causal Effects on Networked Observational Data via Representation Learning},
+  author={Song Jiang, Yizhou Sun},
+  booktitle={Proceedings of the 31st ACM International Conference on Information & Knowledge Management},
+  year={2022}
+}
+```
