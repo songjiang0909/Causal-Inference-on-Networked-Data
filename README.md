@@ -8,8 +8,18 @@ This is the implementation of our paper "[Estimating Causal Effects on Networked
 Data
 -----------------
 
-The original data are from [], kudos for the authors!
+The original data are from [this repo](https://github.com/rguo12/network-deconfounder-wsdm20), kudos for the authors!
 
-The data simulation code of this paper is under:
+Due to the size limit, we put 1) data simulation code, 2) the original data and 3) the simulated data in [google drive](https://drive.google.com/drive/folders/1jHjebKNSu-Kdrr-HKj73hkdpMj-1DS7-?usp=sharing).
 
-Some proposed 
+
+How to run?
+-----------------
+
+* Step0 (data): 
+	* Download the simulated data .
+
+* Step1 (run):
+	* `cd ./src`
+	* For Aminer dataset: `python main.py --dataset aminer --epochs 700 --batch_size 3000`
+	* For APS dataset: `python main.py --dataset aps --epochs 500 --batch_size 1200`
