@@ -21,14 +21,14 @@ class GCN_DECONF(nn.Module):
 
         if cuda:
 
-            self.out_t00 = [nn.Linear(nhid,nhid).cuda() for i in range(n_out)]
-            self.out_t10 = [nn.Linear(nhid,nhid).cuda() for i in range(n_out)]
+            self.out_t00 = nn.ModuleList([nn.Linear(nhid,nhid).cuda() for i in range(n_out)])
+            self.out_t10 = nn.ModuleList([nn.Linear(nhid,nhid).cuda() for i in range(n_out)])
             self.out_t01 = nn.Linear(nhid,1).cuda()
             self.out_t11 = nn.Linear(nhid,1).cuda()
 
         else:
-            self.out_t00 = [nn.Linear(nhid,nhid) for i in range(n_out)]
-            self.out_t10 = [nn.Linear(nhid,nhid) for i in range(n_out)]
+            self.out_t00 = nn.ModuleList([nn.Linear(nhid,nhid) for i in range(n_out)])
+            self.out_t10 = nn.ModuleList([nn.Linear(nhid,nhid) for i in range(n_out)])
             self.out_t01 = nn.Linear(nhid,1)
             self.out_t11 = nn.Linear(nhid,1)
 
@@ -91,14 +91,14 @@ class CFR(nn.Module):
 
         if cuda:
 
-            self.out_t00 = [nn.Linear(nhid,nhid).cuda() for i in range(n_out)]
-            self.out_t10 = [nn.Linear(nhid,nhid).cuda() for i in range(n_out)]
+            self.out_t00 = nn.ModuleList([nn.Linear(nhid,nhid).cuda() for i in range(n_out)])
+            self.out_t10 = nn.ModuleList([nn.Linear(nhid,nhid).cuda() for i in range(n_out)])
             self.out_t01 = nn.Linear(nhid,1).cuda()
             self.out_t11 = nn.Linear(nhid,1).cuda()
 
         else:
-            self.out_t00 = [nn.Linear(nhid,nhid) for i in range(n_out)]
-            self.out_t10 = [nn.Linear(nhid,nhid) for i in range(n_out)]
+            self.out_t00 = nn.ModuleList([nn.Linear(nhid,nhid) for i in range(n_out)])
+            self.out_t10 = nn.ModuleList([nn.Linear(nhid,nhid) for i in range(n_out)])
             self.out_t01 = nn.Linear(nhid,1)
             self.out_t11 = nn.Linear(nhid,1)
 
@@ -162,14 +162,14 @@ class GCN_DECONF_INTERFERENCE(nn.Module):
 
         if cuda:
 
-            self.out_t00 = [nn.Linear(nhid+1,nhid).cuda() for i in range(n_out)]
-            self.out_t10 = [nn.Linear(nhid+1,nhid).cuda() for i in range(n_out)]
+            self.out_t00 = nn.ModuleList([nn.Linear(nhid+1,nhid).cuda() for i in range(n_out)])
+            self.out_t10 = nn.ModuleList([nn.Linear(nhid+1,nhid).cuda() for i in range(n_out)])
             self.out_t01 = nn.Linear(nhid,1).cuda()
             self.out_t11 = nn.Linear(nhid,1).cuda()
 
         else:
-            self.out_t00 = [nn.Linear(nhid+1,nhid) for i in range(n_out)]
-            self.out_t10 = [nn.Linear(nhid+1,nhid) for i in range(n_out)]
+            self.out_t00 = nn.ModuleList([nn.Linear(nhid+1,nhid) for i in range(n_out)])
+            self.out_t10 = nn.ModuleList([nn.Linear(nhid+1,nhid) for i in range(n_out)])
             self.out_t01 = nn.Linear(nhid,1)
             self.out_t11 = nn.Linear(nhid,1)
 
@@ -233,14 +233,14 @@ class CFR_INTERFERENCE(nn.Module):
 
         if cuda:
 
-            self.out_t00 = [nn.Linear(nhid+1,nhid).cuda() for i in range(n_out)]
-            self.out_t10 = [nn.Linear(nhid+1,nhid).cuda() for i in range(n_out)]
+            self.out_t00 = nn.ModuleList([nn.Linear(nhid+1,nhid).cuda() for i in range(n_out)])
+            self.out_t10 = nn.ModuleList([nn.Linear(nhid+1,nhid).cuda() for i in range(n_out)])
             self.out_t01 = nn.Linear(nhid,1).cuda()
             self.out_t11 = nn.Linear(nhid,1).cuda()
 
         else:
-            self.out_t00 = [nn.Linear(nhid,nhid) for i in range(n_out)]
-            self.out_t10 = [nn.Linear(nhid,nhid) for i in range(n_out)]
+            self.out_t00 = nn.ModuleList([nn.Linear(nhid,nhid) for i in range(n_out)])
+            self.out_t10 = nn.ModuleList([nn.Linear(nhid,nhid) for i in range(n_out)])
             self.out_t01 = nn.Linear(nhid,1)
             self.out_t11 = nn.Linear(nhid,1)
 
